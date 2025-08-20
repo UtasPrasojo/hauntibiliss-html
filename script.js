@@ -61,5 +61,5 @@ window.addEventListener("resize", () => {
 });
 
 function showLove() {
-  alert("Aku sayang kamu lebih dari apapun 💞");
+  alert("Aku sayang bae gundutt💞");
 }
