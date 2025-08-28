@@ -1,223 +1,134 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Buat bae gunduttt ❤️</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(120deg, #ffd6e0, #ffe6f0);
-      background-size: 200% 200%;
-      animation: bgMove 8s infinite alternate;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
-      position: relative;
-      overflow-y: auto;
-    }
-
-    @keyframes bgMove {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 100% 50%; }
-    }
-
-    .container {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      border-radius: 20px;
-      max-width: 800px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
-      overflow-y: auto;
-      max-height: 80vh;
-    }
-
-    h1 {
-      color: #000000;
-      font-size: 2em;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .typewriter {
-      font-family: 'Dancing Script', cursive;
-      color: #000000;
-      font-size: 1.2em;
-      line-height: 1.8;
-      white-space: pre-wrap;
-      overflow: hidden;
-      border-right: 2px solid #fff;
-      animation: blink 1s step-end infinite;
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
-
-    .heart {
-      width: 15px;
-      height: 15px;
-      position: absolute;
-      background: pink;
-      transform: rotate(45deg);
-      animation: floatUp 6s linear infinite;
-    }
-
-    .heart:before, .heart:after {
-      content: "";
-      width: 15px;
-      height: 15px;
-      position: absolute;
-      background: pink;
-      border-radius: 50%;
-    }
-
-    .heart:before {
-      top: -7.5px;
-      left: 0;
-    }
-
-    .heart:after {
-      left: -7.5px;
-      top: 0;
-    }
-
-    @keyframes floatUp {
-      0% {
-        transform: translateY(100vh) rotate(45deg);
-        opacity: 1;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buat bae gunduttt ❤️</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(120deg, #ffd6e0, #ffe6f0);
+        background-size: 200% 200%;
+        animation: bgMove 8s infinite alternate;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        overflow-y: auto;
       }
-      100% {
-        transform: translateY(-10vh) rotate(45deg);
-        opacity: 0;
+      @keyframes bgMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
       }
-    }
-
-    /* Transisi Halaman */
-    #page-transition {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(255, 192, 203, 0.6);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.5s ease;
-    }
-
-    #page-transition.show {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .transition-heart {
-      font-size: 120px;
-      color: hotpink;
-      animation: bounce 1s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-
-    /* Tombol musik */
-    .music-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #ff69b4;
-      border: none;
-      color: white;
-      padding: 10px 15px;
-      font-size: 16px;
-      border-radius: 30px;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
-      transition: background-color 0.3s;
-    }
-
-    .music-btn:hover {
-      background-color: #ff85c1;
-    }
-
-    /* Tombol WhatsApp */
-    #whatsappButton {
-      display: none;
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    #whatsappButton a {
-      background-color: #25D366;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-size: 16px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      display: inline-block;
-    }
-
-    #whatsappButton a:hover {
-      background-color: #20b358;
-    }
-
-    /* Menyesuaikan ukuran teks untuk perangkat kecil */
-    @media (max-width: 600px) {
       h1 {
-        font-size: 1.6em;
+        color: #000000;
+        font-size: 2em;
+        margin-bottom: 20px;
+        text-align: center;
       }
-
       .typewriter {
-        font-size: 1em;
+        font-family: "Dancing Script", cursive;
+        color: #000000;
+        font-size: 1.2em;
+        line-height: 1.8;
+        white-space: pre-wrap;
+        overflow: hidden;
+        border-right: 2px solid #fff;
+        animation: blink 1s step-end infinite;
       }
-    }
-  </style>
-</head>
-<body>
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+      /* Tombol musik dan VN */
+      .music-btn,
+      .vn-btn {
+        position: fixed;
+        right: 20px;
+        background-color: #ff69b4;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+        transition: background-color 0.3s;
+      }
+      .music-btn:hover,
+      .vn-btn:hover {
+        background-color: #ff85c1;
+      }
+      .music-btn {
+        bottom: 70px;
+      }
+      .vn-btn {
+        bottom: 20px;
+      }
+      /* Tombol WhatsApp */
+      #whatsappButton {
+        display: none;
+        margin-top: 20px;
+        text-align: center;
+      }
+      #whatsappButton a {
+        background-color: #25d366;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 16px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        display: inline-block;
+      }
+      #whatsappButton a:hover {
+        background-color: #20b358;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Audio -->
+    <audio id="music" loop>
+      <source src="music/lagu-ucapan.mp3" type="audio/mpeg" />
+      Browser kamu tidak mendukung audio 😢
+    </audio>
+    <audio id="vn-ghifa" loop>
+      <source src="music/buat-ghifa.mp3" type="audio/mpeg" />
+      Browser kamu tidak mendukung audio 😢
+    </audio>
 
-  <!-- Transisi Love -->
-  <div id="page-transition">
-    <div class="transition-heart">❤️</div>
-  </div>
-
-  <!-- Audio -->
-  <audio id="music" autoplay loop>
-    <source src="music/lagu-ucapan.mp3" type="audio/mpeg">
-    Browser kamu tidak mendukung audio 😢
-  </audio>
-
-  <!-- Kontainer isi -->
-  <div class="ucapan-container">
-    <h1>Untuk Ghifa Attaya Ulhaq 💖</h1>
-    <div class="typewriter" id="typewriterText"></div>
-
-    <!-- Tombol WhatsApp -->
-    <div id="whatsappButton">
-      <a href="https://wa.me/6289669643272?text=aku%20disini%20mau%20menjawab%20pertanyaan%20mu." target="_blank">
-        💬 Disini yah jawabnya
-      </a>
+    <!-- Isi -->
+    <div class="ucapan-container">
+      <h1>Untuk Ghifa Attaya Ulhaq 💖</h1>
+      <div class="typewriter" id="typewriterText"></div>
+      <div id="whatsappButton">
+        <a
+          href="https://wa.me/6289669643272?text=aku%20disini%20mau%20menjawab%20pertanyaan%20mu."
+          target="_blank"
+        >
+          💬 Disini yah jawabnya
+        </a>
+      </div>
     </div>
-  </div>
 
-  <!-- Tombol kontrol musik -->
-  <button class="music-btn" onclick="toggleMusic()">ini juga ada lagunyaa lohh</button>
+    <!-- Tombol kontrol audio -->
+    <button class="music-btn" id="btn-music">
+      Biar Ga Bosen Sambil Diplay Musik nya
+    </button>
+    <button class="vn-btn" id="btn-vn">VN Buat Ghifa</button>
 
-  <!-- Script -->
-  <script>
-    const text = `
+    <script>
+      const text = `
 Selamat 20 + utas untuk Ghifa Attaya Ulhaq 💖
 
 Aku mau ngucapin lagi buat kamu biar aku jadi orang terakhir yang ngucapin ulang tahun mu yang ke 21 ini hehe.
@@ -262,60 +173,52 @@ Untuk yang tersayang 💖
 
 Ghifa Attaya Ulhaq
 `;
+      let i = 0;
+      const speed = 50;
 
-    let i = 0;
-    const speed = 50;
-    function typeWriter() {
-      if (i < text.length) {
-        document.getElementById("typewriterText").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      } else {
-        // Tampilkan tombol WA setelah selesai ketik
-        document.getElementById("whatsappButton").style.display = "block";
+      function typeWriter() {
+        if (i < text.length) {
+          document.getElementById("typewriterText").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        } else {
+          document.getElementById("whatsappButton").style.display = "block";
+        }
       }
-    }
-    typeWriter();
+      typeWriter();
 
-    // Hati mengambang
-    setInterval(() => {
-      const heart = document.createElement("div");
-      heart.classList.add("heart");
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 6000);
-    }, 300);
+      // Ambil audio
+      const music = document.getElementById("music");
+      const vn = document.getElementById("vn-ghifa");
 
-    // Kontrol musik
-    const music = document.getElementById("music");
-    const musicBtn = document.querySelector(".music-btn");
+      const btnMusic = document.getElementById("btn-music");
+      const btnVn = document.getElementById("btn-vn");
 
-    function toggleMusic() {
-      if (music.paused) {
-        music.play();
-        musicBtn.innerHTML = "pause";
-      } else {
-        music.pause();
-        musicBtn.innerHTML = "play";
-      }
-    }
-
-    // Transisi halaman
-    const links = document.querySelectorAll("a");
-    const transition = document.getElementById("page-transition");
-
-    links.forEach(link => {
-      link.addEventListener("click", function(e) {
-        e.preventDefault();
-        const href = this.getAttribute("href");
-        transition.classList.add("show");
-        setTimeout(() => {
-          window.location.href = href;
-        }, 800); // durasi animasi
+      // Tombol musik
+      btnMusic.addEventListener("click", () => {
+        if (music.paused) {
+          music.play();
+          vn.pause();
+          vn.currentTime = 0; // stop VN
+          btnMusic.textContent = "Pause Music";
+        } else {
+          music.pause();
+          btnMusic.textContent = "Play Music";
+        }
       });
-    });
-  </script>
 
-</body>
+      // Tombol VN
+      btnVn.addEventListener("click", () => {
+        if (vn.paused) {
+          vn.play();
+          music.pause();
+          music.currentTime = 0; // stop Music
+          btnVn.textContent = "Pause VN";
+        } else {
+          vn.pause();
+          btnVn.textContent = "VN Buat Ghifa";
+        }
+      });
+    </script>
+  </body>
 </html>
